@@ -1,0 +1,5 @@
+AuthenticationMethods publickey,keyboard-interactive
+ChallengeResponseAuthentication yes
+PermitRootLogin yes
+UsePAM yes
+
