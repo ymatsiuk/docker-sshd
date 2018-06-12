@@ -23,11 +23,18 @@ Your emergency scratch codes are:
 Run container:
 
 ```
-docker run -d -p 32022:22 sshd
+docker run -d -p 22:22 sshd
 ```
 
 Login into container:
 
 ```
-ssh root@localhost -p 32022 -i ~/.ssh/id_rsa
+ssh root@localhost -i ~/.ssh/id_rsa
+```
+
+Deploy a stack:
+
+```
+docker swarm init
+docker stack deploy -c sshd-stack.yml sshd
 ```
